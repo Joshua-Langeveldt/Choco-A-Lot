@@ -1,3 +1,5 @@
+
+ /* Compulsory CSS */
 *,
 *::before,
 *::after{
@@ -61,7 +63,7 @@ img[alt='mainLogo'] {
     border-radius: 10px;
 }
 
-:is(a, .link) {
+:is(a, .link, li img) {
     font-family: "JetBrains Mono", monospace;
     font-style: normal;
     font-size: larger;
@@ -72,9 +74,6 @@ img[alt='mainLogo'] {
     }
 }
 
-.hamburger {
-    display: none;
-}
 /* Ends Here  */
 
 /* Footer */
@@ -85,3 +84,281 @@ img[alt='mainLogo'] {
         background-color: #4D869C;
     }
     
+/* Home Page */
+
+.main-home {
+    text-align: center;
+    margin:12rem;
+    margin-left: 8rem;
+}
+
+.cust-btn{
+    font-family: "JetBrains Mono", monospace;
+    font-style: normal;
+    font-size: 0.8rem;
+margin: 30px;
+width: 140px;
+height: 50px;
+border: 1px solid #000;
+border-radius: 15px;
+    color: #fff;
+    background-color: #4D869C;
+    transition: all .5s;
+    
+    &:hover {
+        transform: scale(1.2);
+        background-color: #ffc0cb;
+    }
+}
+
+
+/* Background Video */
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+.cust-a {
+ text-decoration: none;
+text-align: center;
+color: #000;
+}
+
+.main-home h1 {
+    font-size: 4rem;
+    color: #000;
+}
+
+.main-home p {
+    font-size: 20px;
+    color: #000;
+}
+/* HomeStyling Ends here */
+
+/* AboutStyling*/
+
+#aboutContainer{
+	background: linear-gradient(to bottom, #4D869C, #ffc0cb);
+    text-align: center;
+}
+
+img[alt='aboutLogo'] {
+    margin: 1px 11px 1px;
+    width: 8.5rem;
+    height: 8.5rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.main-about {
+    margin:12rem;
+    margin-left: 8rem;
+}
+
+.about-p {
+    font-family: "JetBrains Mono", monospace;
+    font-style: normal;
+font-weight:900;
+    font-size: large;
+    padding: 10px;
+    margin: 30px;
+}
+
+.about-h2{
+ font-family: "JetBrains Mono", monospace;
+ font-style: normal;
+font-size: 2rem;
+    font-weight: 800;
+    padding: 35px;
+
+}
+
+/* AboutStyling Ends here */
+
+/* FeaturedStyling */
+
+#featuredContainer{
+margin:-12rem;
+    width: 104rem;
+    height: 40rem;
+    background-color: #fff;
+}
+.main-featured {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+margin-left: 12rem;    
+margin-bottom: 5rem;
+    
+}
+
+.featured-h2{
+    font-family: "JetBrains Mono", monospace;
+    font-style: normal;
+   font-size: 2rem;
+       font-weight: 800;
+       padding: 50px;   
+    text-align: center;
+    margin-left: 11rem;
+}
+
+.featured-img {
+    width: 13rem;
+    height: 13rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100px; 
+    border: #000 2px solid;
+    transition: all .5s;
+    
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+
+.featured-img, .featured-p {
+    margin: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-family: "JetBrains Mono", monospace;
+    font-style: normal;
+    font-size: larger;
+}
+
+/* FeaturedStyling Ends Here*/
+
+
+/* Why Us Styling */
+#whyUsContainer {
+
+	background: linear-gradient(to top, #4D869C, #ffc0cb);
+    height: max-content;
+    margin-bottom: -2rem;
+}
+
+.icon {
+    background-color: transparent;
+}
+
+
+.usContainer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 2rem;
+    margin-left: 14rem;
+  }
+
+  .usSection {
+    margin: 4rem;
+    width: 50rem;
+    border-radius: 10px;
+    border: #000 2px solid;
+    padding: 20px;
+    display:flex; 
+	flex-direction : column; 
+	align-items : center; 
+	justify-content : center; 
+    font-weight: 600;
+    font-family: "JetBrains Mono", monospace;
+    font-style: normal;
+	text-align : center; 
+	gap :15px
+}
+.usSection:nth-child(1) {	background: linear-gradient(to bottom, #4D869C, #ffc0cb);
+}
+.usSection:nth-child(2) {	background: linear-gradient(to bottom, #4D869C, #ffc0cb);
+}
+.usSection:nth-child(3) {	background: linear-gradient(to bottom, #4D869C, #ffc0cb);
+}
+
+
+.icon{
+	width :100px ; height:100px
+}
+
+/* Why Us Styling Ends Here*/
+
+.footer{
+width: 100%;
+    height:90px;
+    text-align: center;
+    background-color: #4D869C;
+}
+
+.f-text{
+
+    margin-left: 12rem;
+
+}
+
+/*Media Queries*/
+/* Add this at the end of your CSS file */
+
+/* For tablets */
+@media (width < 999px) {
+        .nav a {
+            /* display: none; */
+        }
+
+        .nav.active a {
+display: inline-block;
+padding: 50px;
+margin: 2rem;
+            text-align: center;
+
+        }
+
+    .main-home, .main-about.main {
+        margin: 4rem 2rem;
+        height: auto;
+    }
+
+    #bgVideo {
+        position:absolute;
+margin-bottom: -6rem;
+        width: 100%;
+        height: auto;
+        object-fit:cover;
+    }
+    
+    img[alt='mainLogo'] {
+        /* display: none; */
+    }
+
+    .main-featured, .usContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+
+    }
+
+    #featuredContainer, #whyUsContainer{ 
+
+        width: 60rem;
+        height: auto;
+    }
+
+    .usSection {
+        height: auto;
+        width: 50%;
+    }
+
+
+}
+
+/*Home Page Finishes Here*/
+/* .......................................................................................................................*/
+
