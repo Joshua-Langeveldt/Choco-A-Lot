@@ -307,8 +307,9 @@ margin-bottom: 5rem;
 /* Why Us Styling Ends Here*/
 
 .footer{
-width: 100%;
+width: 95%;
     height:100%;
+    margin-left: 6rem;
     text-align: center;
     background: linear-gradient(to bottom, #4D869C, #ffc0cb);
 }
@@ -530,3 +531,139 @@ img[alt='Image1']:hover {
     height: 100px;
     width: 100px;
 }
+
+/* ABOUT SECTION ENDS HERE .............................................................*/
+
+
+/* Contact Section */
+
+.contactContainer {
+    padding: 60px 0;
+    background: var(--alternative);
+}
+
+
+
+.containing {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Form Styles */
+
+form {
+    padding: 30px;
+    border-radius: 4px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--alternative);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background: #007bff;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.p-5{
+
+    background: linear-gradient(to bottom, #4D869C, #ffc0cb);
+    padding: 2rem;
+}
+
+.text-cust{
+    color: var(--primary);
+    margin: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-style: normal;
+        font-size: 1rem;
+
+}
+
+/* Footer styling */
+.footerContainer {
+    background: linear-gradient(to top, #4D869C, #ffc0cb);
+    padding: 20px;
+    font-family: "JetBrains Mono", monospace;
+    font-style: normal;
+        font-size: 1rem;
+        color: #000;
+  }
+  
+  /* About me section */
+  .footerContainer .about-me {
+    float: left;
+    width: 20%;
+  }
+  
+  /* Features section */
+  .footerContainer .features {
+    float: left;
+    width: 20%;
+  }
+  
+  /* Follow me section */
+  .footerContainer .follow-me {
+    float: left;
+    width: 20%;
+  }
+  
+  /* Email me section */
+  .footerContainer .email-me {
+    float: right;
+    width: 10%;
+  }
+
+  .subcription-form {
+    background: linear-gradient(to right, #4D869C, #ffc0cb);
+  }
+  
+  /* Email input field */
+  .footerContainer .email-input {
+    padding: 10px;
+    margin-right: 10px;
+
+  }
+  
+  /* Send button */
+  .footerContainer .send-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  /* Clear floats */
+  .footerContainer .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Copyright notice */
+  .footerContainer .copyright {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  /*icons*/
+  .nav-links{
+
+    color: var(--primary);
+    padding: 10px;
+    text-decoration: none;
+  }
