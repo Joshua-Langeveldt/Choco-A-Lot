@@ -399,8 +399,27 @@ margin-bottom: -6rem;
         padding: 35px; 
     }
 
+    /*Product Section MQ*/
+
+
+.sortBtn {
+    margin-left:0rem ;
+}
+
+.searchTab {
+    margin-left:15rem !important;
+}
+
+.spinner-border{
+
+    margin-left: 22rem !important;
+     
+}
+
 
 }
+
+
 
 
 
@@ -667,3 +686,78 @@ form {
     padding: 10px;
     text-decoration: none;
   }
+
+  /* End Of Section  ...............................................................*/
+
+  /* Product Section */
+
+  .card {
+    width: 26rem;
+    height: 30rem;
+    display: inline-block;
+    margin: 2rem;
+  }
+
+  .card-img-top {
+margin: 1rem 5.5rem ;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 20px;
+  }
+
+  .card-title {
+
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .card-text {
+font-weight: 400;
+    font-size: 0.9rem;
+  }
+
+  .btnAddToCart {
+margin-left: 7.5rem;
+background-color: #ffc0cb;
+font-family: "JetBrains Mono", monospace;
+font-style: normal;
+}
+
+.display-2 {
+
+    margin: 1.9rem;
+    font-size: 3.5rem;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.searchTab {
+   
+margin-left: 31rem;
+}
+
+.col {
+
+margin-top: 4rem;
+margin-bottom: 4rem;
+}
+
+.sortBtn {
+
+    background-color: #ffc0cb;
+    border: 2px solid #4D869C;
+}
+
+
+.spinner-border {
+    animation: spin 2s linear infinite;
+    margin: 1rem 43rem;
+    color: #4D869C;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* End Of Section .......................................................................*/
