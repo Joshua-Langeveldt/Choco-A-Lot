@@ -1,6 +1,4 @@
-// Current year
-// document.querySelector('[currentYear]').textContent =
-//     new Date().getUTCFullYear()
+
 
     
     let container = document.querySelector('[ourStore]')
@@ -48,7 +46,6 @@
               </div>`
             }
         }
-        //let me add a comment
         displayProducts(sweetProducts)
 
 // Sorting by ascending and descending

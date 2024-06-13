@@ -105,7 +105,6 @@ img[alt='mainLogo'] {
 .main-home {
     text-align: center;
     margin:12rem;
-    margin-left: 8rem;
 }
 
 .cust-btn{
@@ -162,6 +161,7 @@ color: var(--primary);
 #aboutContainer{
     background: linear-gradient(to bottom, #4D869C, #ffc0cb);
     text-align: center;
+    width: 100%;
 }
 
 img[alt='aboutLogo'] {
@@ -175,8 +175,7 @@ img[alt='aboutLogo'] {
 }
 
 .main-about {
-    margin:12rem;
-    margin-left: 8rem;
+    margin-left: 0rem;
 }
 
 .about-h  {
@@ -184,8 +183,8 @@ img[alt='aboutLogo'] {
     font-style: normal;
 font-weight:900;
     font-size: large;
-    padding: 10px;
-    margin: 30px;
+    padding: 20px;
+    margin: 30px 50px;
 }
 
 .about-h2{
@@ -202,9 +201,9 @@ font-size: 2rem;
 /* FeaturedStyling */
 
 #featuredContainer{
-margin:-12rem;
-    width: 104rem;
-    height: 40rem;
+    margin-top: 0;
+    width: 100%;
+    height: auto;
     background: linear-gradient(to bottom, #4D869C, #ffc0cb)
 }
 .main-featured {
@@ -212,7 +211,6 @@ margin:-12rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-margin-left: 12rem;    
 margin-bottom: 5rem;
     
 }
@@ -224,7 +222,6 @@ margin-bottom: 5rem;
        font-weight: 800;
        padding: 50px;   
     text-align: center;
-    margin-left: 11rem;
 }
 
 .featured-img {
@@ -259,8 +256,8 @@ margin-bottom: 5rem;
 #whyUsContainer {
 
     background: linear-gradient(to bottom, #4D869C, #ffc0cb);
-   height: max-content;
-    margin-bottom: -2rem;
+   height: auto;
+   width: 100% !important;
 }
 
 .icon {
@@ -272,8 +269,7 @@ margin-bottom: 5rem;
     display: flex;
     justify-content: space-between;
     text-align: center;
-    margin: 2rem;
-    margin-left: 14rem;
+    /* margin: 2rem; */
   }
 
   .usSection {
@@ -307,9 +303,8 @@ margin-bottom: 5rem;
 /* Why Us Styling Ends Here*/
 
 .footer{
-width: 95%;
+width: 100%;
     height:100%;
-    margin-left: 6rem;
     text-align: center;
     background: linear-gradient(to bottom, #4D869C, #ffc0cb);
 }
@@ -323,7 +318,7 @@ width: 95%;
 /*Media Queries*/
 /* Add this at the end of your CSS file */
 
-/* For tablets */
+/* For tablets&phones */
 @media (width < 999px) {
 
 
@@ -483,7 +478,7 @@ font-family:  "JetBrains Mono", monospace;
     background: linear-gradient(to top, #4D869C, #ffc0cb);
 }
 
-.custom{
+.customTesti{
     font-family: "JetBrains Mono", monospace;
     font-style: normal;
    font-size: 2rem;
@@ -569,16 +564,77 @@ img[alt='Image1']:hover {
     padding: 15px;
 }
 
-.text-center {
+.text-center{
     text-align: center;
 }
+
+.form-control {
+
+    z-index: 2;
+ font-weight: bolder;
+}
+
+#contact-section {
+    position: relative;
+    height: auto;
+}
+ #contact-section::before {
+    content: "";
+    background-image: url('https://joshua-langeveldt.github.io/images/images/Choco-A-Lot/bg-img-2.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+    z-index: 1; 
+}
+
+ #contact-section .text-cust, #contact-section h2 {
+    position: relative;
+    z-index: 2; 
+    font-weight: bolder;
+}
+.about-main{
+margin-left: -3rem;
+    text-align: center;
+
+}
+
+
+.text-cust{
+font-family:  "JetBrains Mono", monospace;
+    margin: 9px 300px;
+    padding: 25px;
+}
+
+.custom {
+    font-family: "JetBrains Mono", monospace;
+    font-style: normal;
+   font-size: 2rem;
+  font-weight: bolder;
+    padding: 50px;
+    text-align: center;
+    z-index: 2;
+    background: linear-gradient(to top, #4D869C, #ffc0cb);
+    border-radius: 20px;
+    margin-bottom: -2.5rem;
+}
+
 
 /* Form Styles */
 
 form {
     padding: 30px;
     border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 3; /* brings the contact form to the front above the background image*/
+    position: relative;
 }
+
 
 .form-control {
     width: 100%;
@@ -589,7 +645,7 @@ form {
 }
 
 .btn-primary {
-    background: #007bff;
+    background: #4D869C;
     border: none;
     color: #000;
     padding: 10px 20px;
@@ -761,3 +817,23 @@ margin-bottom: 4rem;
 
 
 /* End Of Section .......................................................................*/
+
+
+/* Admin Section */
+
+th, td{
+    border: 1px solid black;
+    padding: 0.6rem 2rem;
+    margin: 0;
+}
+.tableContainer{
+    width: 93vw;
+    margin: auto;
+    margin-top: 2rem;
+}
+.adminImages{
+    width: 30%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+}
