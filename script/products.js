@@ -9,7 +9,7 @@
     )
     console.log(sweetProducts);
     // items/products
-    let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
+    let checkoutItems = JSON.parse(localStorage.getItem('checkout')) 
         ? JSON.parse(localStorage.getItem('checkout'))
         : []
         function displayProducts(args) {
@@ -28,7 +28,7 @@
                             <img src="${product.img_url}" class="card-img-top" alt="${product.productName}" loading='lazy'>
                             <div class="card-body">
                                 <h5 class="card-title">${product.productName}</h5>
-                                <p class="card-text">${product.Material}</p>
+                                <p class="card-text">${product.category}</p>
                                 <p class="card-text">
                                     <span class="shadow amount fw-bold"></span>
                                     R${product.Amount}
@@ -98,27 +98,27 @@ searchProduct.addEventListener('keyup', () => {
  
 
 
-
-
-
-
-
-
-
-
-        // Add to cart
-        function addToCart(product) {
-            try {
-                checkoutItems.push(product)
-                localStorage.setItem('checkout', JSON.stringify(checkoutItems))
-                document.querySelector('[counter]').textContent = checkoutItems.length || 0
-            } catch (e) {
-                alert("Unable to add to cart")
-            }
-        }
-        window.onload = () => {
-            document.querySelector('[counter]').textContent = checkoutItems.length || 0
-        }
+               
+ // Add to cart
+let sweetsCart = JSON.parse(localStorage.getItem('checkout')) || [];
+function addToCart(product) {
+    try {
+        sweetsCart.push(product);
+        localStorage.setItem('checkout', JSON.stringify(sweetsCart));
+        document.querySelector('[counter]').textContent = JSON.parse(localStorage.getItem('checkout'))
+        ? JSON.parse(localStorage.getItem('checkout')).length
+        : 0
+    } catch (e) {
+        alert('The Checkout is under maintenance');
+    }
+}
+       
+               // Counter
+       window.onload = () => {
+           document.querySelector('[counter]').textContent = JSON.parse(localStorage.getItem('checkout'))
+               ? JSON.parse(localStorage.getItem('checkout')).length
+               : 0
+       }
 
 
 
