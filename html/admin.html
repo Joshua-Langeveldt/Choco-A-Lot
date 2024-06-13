@@ -74,28 +74,76 @@
         </div>
       </nav>
       
-      <main>
-      <section class="container-fluid">
-        <div class="row">
-          <div class="adminButtons">
-            <button class="btnSorting">SORTING</button>
-            <button class="btnAddNewProducts">ADD NEW PRODUCTS</button>
-          </div>
-          <div class="tableContainer">
-            <table>
-              <thead>
-               <th>Product Name</th>
-               <th>Image</th>
-               <th>Material</th>
-               <th>Amount</th>
-              </thead>
-              <tbody ourStore>
-              </tbody>
-           </table>
-          </div>
-        </div>
-      </section>
+      <main class="container-fluid">
+        <section id="adminSection">
+            <div class="row">
+                <div class="adminButtons">
+                    <button class="btnSorting" sorting>SORTING ALPHABETICALLY</button>
+                    
+                    <!-- Add New Product Button -->
+                    <button type="button" class="btn btnAddNewProducts" id="saveProduct" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                      Add New Product
+                    </button>
+    
+                    <!-- Add New Product Modal -->
+                    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form id="addProductForm">
+                              <div class="mb-3">
+                                <label for="productName" class="form-label">Product Name</label>
+                                <input type="text" class="form-control" id="productName" required>
+                              </div>
+                              <div class="mb-3">
+                                <label for="productDetails" class="form-label">Product Category</label>
+                                <input type="text" class="form-control" id="productDetails" required>
+                              </div>
+                              <div class="mb-3">
+                                <label for="productAmount" class="form-label">Product Amount</label>
+                                <input type="number" class="form-control" id="productAmount" required>
+                              </div>
+                              <div class="mb-3">
+                                <label for="productImage" class="form-label">Image URL</label>
+                                <input type="text" class="form-control" id="productImage" required>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="saveNewProduct">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+
+
+                <div class="tableContainer table-responsive-lg table-responsive-md table-responsive-sm">
+                    <table class="table table-warning">
+                        <thead>
+                            <th>Product Name</th>
+                            <th>Image</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </thead>
+                        <tbody ourStore>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
+    
+    
+
+  
 
 
 

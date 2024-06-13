@@ -743,7 +743,7 @@ form {
     text-decoration: none;
   }
 
-  /* End Of Section  ...............................................................*/
+  /* End Of Section  ...................................................................................................*/
 
   /* Product Section */
 
@@ -816,24 +816,76 @@ margin-bottom: 4rem;
 }
 
 
-/* End Of Section .......................................................................*/
+/* End Of Section ..........................................................................................................*/
 
 
 /* Admin Section */
 
+#adminSection {
+
+    font-family: "JetBrains Mono", monospace;
+    font-style: normal;
+        font-size: 1rem;
+        text-align: center;
+}
+
 th, td{
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 0.6rem 2rem;
     margin: 0;
 }
 .tableContainer{
     width: 93vw;
-    margin: auto;
-    margin-top: 2rem;
+    margin: 10rem 5rem;
+    align-items: center;
+
 }
 .adminImages{
-    width: 30%;
+    width: 20%;
     aspect-ratio: 1;
     object-fit: cover;
     object-position: center;
+}
+
+.editBtn, .deleteBtn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.editBtn {
+    background-color: #4CAF50;
+}
+
+.deleteBtn {
+    background-color: #f44336;
+}
+
+.adminButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0rem -150px;
+    
+}
+
+.btnSorting, .btnAddNewProducts {
+
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(to right, #4D869C, #ffc0cb);
+}
+
+/*........................................................................................................................................*/
+
+.checkoutImages {
+
+    width: 20px;
+    height: 20px;
 }
