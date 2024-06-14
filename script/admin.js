@@ -27,20 +27,30 @@ function deleteProduct(index){
 
 // Edit Button Functionality & has to be placed outside the global scope
 
-function UpdateProduct(item, index){
+function UpdateProduct(index){
     try{
-        item.productName = document.querySelector(`#admin-name${item.id}`).value;
-        item.category = document.querySelector(`#admin-details${item.id}`).value;
-        item.Amount = document.querySelector(`#admin-amount${item.id}`).value;
-        item.img_url = document.querySelector(`#admin-image${item.id}`).value;
-        sweetProducts[index] = Object.assign({}, item);
-        localStorage.setItem('products',JSON.stringify(sweetProducts));
+        let product = sweetProducts[index];
+        
+        // taps into the index to target the elements for the specific product
+        product.productName = document.querySelector(`#admin-name${index}`).value;
+        product.category = document.querySelector(`#admin-details${index}`).value;
+        product.Amount = document.querySelector(`#admin-amount${index}`).value;
+        product.img_url = document.querySelector(`#admin-image${index}`).value;
+
+        // Updates the product in the array
+        sweetProducts[index] = Object.assign({}, product);
+
+        // Updates localStorage with the new list of products
+        localStorage.setItem('products', JSON.stringify(sweetProducts));
+
         displayProducts(sweetProducts);
+
         location.reload();
     } catch(e) {
         alert('Unable to Edit the Products');
     }
 }
+
 
 
 // Displaying The Products
@@ -57,37 +67,31 @@ function displayProducts(args) {
             <td>${product.category}</td>
             <td>R${product.Amount}</td>
             <td>
-
             <div>
                 <div class="buttons">
-                <button class="btn edit btn-secondary " data-bs-toggle="modal" data-bs-target="#updateProduct${product.id}">Edit</button>
-
+                <button class="btn edit btn-secondary " data-bs-toggle="modal" data-bs-target="#updateProduct${i}">Edit</button>
                 <button class="btn btn-danger delete " onclick="deleteProduct(${i})">Delete</button>
                 </div>
-
-                <div class="modal fade" id="updateProduct${product.id}" tabindex="-1" aria-labelledby="updateProduct${product.id}" aria-hidden="true">
+                <div class="modal fade" id="updateProduct${i}" tabindex="-1" aria-labelledby="updateProduct${i}" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="updateProduct${product.id}">Update Product</h1>
+                      <h5 class="modal-title" id="updateProduct${i}">Update Product</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-
                     <div class="modal-body">
                       <form>
                       <div class="container">
-                      <input class="form-control m-2" type="text" placeholder="Enter a Product Name" value="${product.productName}" name ="admin-name" id="admin-name${product.id}" required>
-                      <input class="form-control m-2" type="text" placeholder="Enter Image URL" value="${product.img_url}" name="admin-image" id="admin-image${product.id}" required>
-                      <textarea class="form-control m-2" placeholder="Enter your Product details" required name="admin-details" id="admin-details${product.id}">${product.category}</textarea>
-                      <input class="form-control m-2" type="number" placeholder="Enter the Product Amount" value="${product.Amount}" name="admin-amount" id="admin-amount${product.id}" required>
+                      <input class="form-control m-2" type="text" placeholder="Enter a Product Name" value="${product.productName}" name ="admin-name" id="admin-name${i}" required>
+                      <input class="form-control m-2" type="text" placeholder="Enter Image URL" value="${product.img_url}" name="admin-image" id="admin-image${i}" required>
+                      <textarea class="form-control m-2" placeholder="Enter your Product details" required name="admin-details" id="admin-details${i}">${product.category}</textarea>
+                      <input class="form-control m-2" type="number" placeholder="Enter the Product Amount" value="${product.Amount}" name="admin-amount" id="admin-amount${i}" required>
                       </div>
                       </form>
                     </div>
-
-                    
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-secondary" onclick='UpdateProduct(${JSON.stringify(product)}, ${i})'>Save changes</button>
+                      <button type="button" class="btn btn-secondary" onclick='UpdateProduct(${i})'>Save changes</button>
                     </div>
                   </div>
                     </div>
@@ -97,7 +101,6 @@ function displayProducts(args) {
         </tr>
         `;
         })
-
     } catch(e) {
         tableContent.innerHTML = `
         <div class="d-flex justify-content-center">

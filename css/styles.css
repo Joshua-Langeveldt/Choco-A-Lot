@@ -411,8 +411,39 @@ margin-bottom: -6rem;
      
 }
 
+/*Admin Section MQ*/
 
+.tableContainer {
+    margin-left: 2rem !important;
+    width: 100%; /* Make the table container take up the full width */
 }
+
+table {
+    width: 100%; /* Make the table take up the full width of its container */
+    table-layout: fixed; /* Use a fixed layout to prevent the table from overflowing its container */
+}
+
+th, td {
+    word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+    
+}
+
+.adminButtons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+}
+
+.btnSorting, .btnAddNewProducts {
+    margin-bottom: 10px; /* Add space between buttons when stacked */
+}
+
+.card-img-top {
+    width: 50px !important;
+    height: 50px !important;
+    margin-left: 2rem !important;
+}
+}
+
+
 
 
 
@@ -821,26 +852,28 @@ margin-bottom: 4rem;
 
 /* Admin Section */
 
-#adminSection {
+/* Admin Section */
 
+#adminSection {
     font-family: "JetBrains Mono", monospace;
     font-style: normal;
-        font-size: 1rem;
-        text-align: center;
+    font-size: 1rem;
+    text-align: center;
 }
 
-th, td{
+th, td {
     border: 2px solid black;
     padding: 0.6rem 2rem;
     margin: 0;
 }
-.tableContainer{
+
+.tableContainer {
     width: 93vw;
     margin: 10rem 5rem;
     align-items: center;
-
 }
-.adminImages{
+
+.adminImages {
     width: 20%;
     aspect-ratio: 1;
     object-fit: cover;
@@ -869,11 +902,9 @@ th, td{
     justify-content: space-between;
     align-items: center;
     margin: 20px 0rem -150px;
-    
 }
 
 .btnSorting, .btnAddNewProducts {
-
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -882,10 +913,7 @@ th, td{
     background: linear-gradient(to right, #4D869C, #ffc0cb);
 }
 
-/*........................................................................................................................................*/
-
-.checkoutImages {
-
-    width: 20px;
-    height: 20px;
+/* Responsive styles for 720px width */
+@media (max-width: 720px) {
+   
 }
