@@ -80,30 +80,32 @@
           <div class="row">
             <div class="cartHeading">
               <h1 class="mt-3 mb-3">CHECKOUT</h1>
+              <div class="checkoutContentWrapper">
+                <div class="row gap-2 justify-content-center" recentProducts></div>
+                <div class="checkoutTable">
+                  <table id="checkoutTable">
+                    <tr class="trFont">
+                      <th id="checkName">Product Name</th>
+                      <th id="checkImage">Image</th>
+                      <th id="checkCategory">Category</th>
+                      <th id="checkQuantity">Quantity</th>
+                      <th id="checkAmount">Amount</th>
+                      <th id="checkTotal">Total</th>
+                    </tr>
+                    <tbody table-checkout>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="checkoutContent d-flex flex-column">
+                  <h3 id="total-container" class="finalTotal"></h3>
+                  <button class="btncheckout" purchase>Purchase</button>
+                  <button class="btncheckout" clear>Clear</button>
+                </div>
+              </div>
             </div>
-            <div class="row gap-2 justify-content-center" recentProducts></div>
-            <div class="checkoutTable">
-              <table id="checkoutTable">
-              <tr class="trFont">
-                <th id="checkName">Product Name</th>
-                <th id="checkImage">Image</th>
-                <th id="checkCategory">Category</th>
-                <th id="checkQuantity">Quantity</th>
-                <th id="checkAmount">Amount</th>
-                <th id="checkTotal">Total</th>
-              </tr>
-              <tbody table-checkout>
-              </tbody>
-            </table></div>
-      <div class="checkoutContent d-flex flex-column">
-        <h3 id="total-container" class="finalTotal"></h3>
-        <button class="btncheckout" purchase>Purchase</button>
-        <button class="btncheckout" clear>Clear</button>
-      </div>
           </div>
         </section>
       </main>
-
 
 <!-- Footer Section -->
 <footer class="footerContainer">

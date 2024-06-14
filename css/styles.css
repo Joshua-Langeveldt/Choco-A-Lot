@@ -436,11 +436,28 @@ th, td {
     margin-bottom: 10px; /* Add space between buttons when stacked */
 }
 
-.card-img-top {
+.card-img {
     width: 50px !important;
     height: 50px !important;
     margin-left: 2rem !important;
 }
+
+/* Checkout Section MQ */
+.cartHeading {
+    padding: 30px 0; /* Reduced padding */
+  }
+
+  .checkoutTable, .checkoutContent {
+    max-width: 90%; /* Adjusted max-width for smaller screens */
+  }
+
+  .btncheckout {
+    padding: 8px 16px; /* Smaller padding for buttons */
+  }
+
+  .checkoutImages {
+    width: 4rem; /* Smaller images for narrower screens */
+  }
 }
 
 
@@ -787,8 +804,8 @@ form {
 
   .card-img-top {
 margin: 1rem 5.5rem ;
-    width: 14rem;
-    height: 14rem;
+    width: 14rem !important;
+    height: 14rem !important;
     border-radius: 20px;
   }
 
@@ -873,7 +890,7 @@ th, td {
     align-items: center;
 }
 
-.adminImages {
+.card-img {
     width: 20%;
     aspect-ratio: 1;
     object-fit: cover;
@@ -913,7 +930,71 @@ th, td {
     background: linear-gradient(to right, #4D869C, #ffc0cb);
 }
 
-/* Responsive styles for 720px width */
-@media (max-width: 720px) {
-   
+/*............................................................................................................................*/
+
+/* Checkout Section */
+.cartHeading {
+    position: relative;
+    text-align: center;
+    color: #000;
+    padding: 50px 0;
+  }
+
+  .cartHeading::before {
+    content: "";
+    background-image: url('https://joshua-langeveldt.github.io/images/images/Choco-A-Lot/bg-img-3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  .checkoutTable, .checkoutContent {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .checkoutContentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    color: #000;
+  }
+
+.btncheckout {
+  margin: 20px auto;
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  background-color: #4D869C;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease; 
 }
+
+.btncheckout:hover {
+  background-color: #367588;
+}
+
+#checkoutTable img {
+  max-width: 100%;
+  height: auto; 
+}
+
+.checkoutImages {
+  width: 5rem;
+}
+

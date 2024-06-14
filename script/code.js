@@ -21,7 +21,7 @@ let products = JSON.parse(localStorage.getItem('products'))
                 
             },
             {
-                productName: "Hershey's Kisses",
+                productName: "Hershey Kisses",
                 category: "Chocolates",
                 Amount: 149.99,
                 img_url: "https://joshua-langeveldt.github.io/images/images/products/kisses.webp"
@@ -202,4 +202,11 @@ searchProduct.addEventListener('keyup', () => {
         container.textContent = ''; // Clear any previous error message
     }
 });
+
+               // Counter
+               window.onload = () => {
+                document.querySelector('[counter]').textContent = JSON.parse(localStorage.getItem('checkout'))
+                    ? JSON.parse(localStorage.getItem('checkout')).length
+                    : 0
+            }
 
