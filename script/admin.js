@@ -62,7 +62,7 @@ function displayProducts(args) {
             container.innerHTML += `
             <tr>
             <td>${product.productName}</td>
-            <td> <img src="${product.img_url}" class="card-img-top" alt="adminImg" loading='lazy'>
+            <td> <img src="${product.img_url}" class="card-img" alt="adminImg" loading='lazy'>
             </td>
             <td>${product.category}</td>
             <td>R${product.Amount}</td>
