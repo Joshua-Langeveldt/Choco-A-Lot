@@ -415,25 +415,25 @@ margin-bottom: -6rem;
 
 .tableContainer {
     margin-left: 2rem !important;
-    width: 100%; /* Make the table container take up the full width */
+    width: 100%; 
 }
 
 table {
-    width: 100%; /* Make the table take up the full width of its container */
-    table-layout: fixed; /* Use a fixed layout to prevent the table from overflowing its container */
+    width: 100%; 
+    table-layout: fixed; 
 }
 
 th, td {
-    word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+    word-wrap: break-word; 
     
 }
 
 .adminButtons {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    flex-direction: column; 
 }
 
 .btnSorting, .btnAddNewProducts {
-    margin-bottom: 10px; /* Add space between buttons when stacked */
+    margin-bottom: 10px; 
 }
 
 .card-img {
@@ -444,19 +444,19 @@ th, td {
 
 /* Checkout Section MQ */
 .cartHeading {
-    padding: 30px 0; /* Reduced padding */
+    padding: 30px 0; 
   }
 
   .checkoutTable, .checkoutContent {
-    max-width: 90%; /* Adjusted max-width for smaller screens */
+    max-width: 90%; 
   }
 
   .btncheckout {
-    padding: 8px 16px; /* Smaller padding for buttons */
+    padding: 8px 16px; 
   }
 
   .checkoutImages {
-    width: 4rem; /* Smaller images for narrower screens */
+    width: 4rem; 
   }
 }
 

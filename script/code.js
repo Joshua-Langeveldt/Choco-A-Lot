@@ -184,7 +184,7 @@ searchProduct.addEventListener('keyup', () => {
     // Display all products if the search input is empty
     if (searchProduct.value.length < 1) {
         displayProducts(products);
-        return; // Exit early to avoid unnecessary processing
+        return;
     }
     
     // Filter products based on the search input
@@ -192,7 +192,6 @@ searchProduct.addEventListener('keyup', () => {
         product.productName.toLowerCase().includes(searchProduct.value.toLowerCase())
     );
     
-    // Display the filtered products
     displayProducts(filteredProduct);
     
     // Display an error message if no products are found

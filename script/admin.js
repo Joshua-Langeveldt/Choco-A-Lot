@@ -163,7 +163,6 @@ document.getElementById('saveNewProduct').addEventListener('click', (event) => {
         // Updates localStorage with the new list of products
         localStorage.setItem('products', JSON.stringify(sweetProducts));
 
-        // Updates the display of products
         displayProducts(sweetProducts);
 
         // Clears the form fields
