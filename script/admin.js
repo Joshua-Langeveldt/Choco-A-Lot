@@ -127,43 +127,46 @@ displayProducts(sweetProducts);
         if (!isToggle) {
           // Sort by product name in ascending order (A to Z)
             sweetProducts.sort((a, b) => a.productName.localeCompare(b.productName));
-            sortingAlphabetically.textContent = 'NAME: A TO Z';
+            sortingAlphabetically.textContent = 'SORT: A TO Z';
             isToggle = true;
         } else {
             // Sort by product name in descending order (Z to A)
             sweetProducts.sort((a, b) => b.productName.localeCompare(a.productName));
-            sortingAlphabetically.textContent = 'NAME: Z TO A';
+            sortingAlphabetically.textContent = 'SORT: Z TO A';
             isToggle = false;
         }
         displayProducts(sweetProducts);
     } catch (e) {
-        container.textContent = e.message || 'We are working on this issue';
+        container.textContent = e.message || 'There is an issue';
     }
 });
 
 
-//lets a new product be added
-
 document.getElementById('saveNewProduct').addEventListener('click', (event) => {
     event.preventDefault(); // Prevent the form from submitting normally
 
-    try{
+    // Get the form values
+    let productName = document.querySelector('#productName').value;
+    let category = document.querySelector('#productDetails').value;
+    let amount = document.querySelector('#productAmount').value;
+    let img_url = document.querySelector('#productImage').value;
 
+    // Check if all the form fields are filled
+    if (!productName || !category || !amount || !img_url) {
+        alert('Please fill in all fields before adding a new product.');
+        return; // Stop the function if any field is empty
+    }
+
+    try {
         // Creates a new product from the form values
-        let newProduct = {
-            productName: document.querySelector('#productName').value,
-            category: document.querySelector('#productDetails').value,
-            Amount: document.querySelector('#productAmount').value,
-            img_url: document.querySelector('#productImage').value,
-        };
- 
+        let newProduct = { productName, category, Amount: amount, img_url };
+
         // Adds the new product to the sweetProducts array
         sweetProducts.push(newProduct);
 
         // Updates localStorage with the new list of products
         localStorage.setItem('products', JSON.stringify(sweetProducts));
 
-        // Updates the display of products
         displayProducts(sweetProducts);
 
         // Clears the form fields
@@ -180,6 +183,7 @@ document.getElementById('saveNewProduct').addEventListener('click', (event) => {
         alert('Unable to add new product');
     }
 });
+
 
 
                

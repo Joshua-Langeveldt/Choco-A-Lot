@@ -316,9 +316,7 @@ width: 100%;
 }
 
 /*Media Queries*/
-/* Add this at the end of your CSS file */
 
-/* For tablets&phones */
 @media (width < 999px) {
 
 
@@ -415,25 +413,25 @@ margin-bottom: -6rem;
 
 .tableContainer {
     margin-left: 2rem !important;
-    width: 100%; /* Make the table container take up the full width */
+    width: 100%; 
 }
 
 table {
-    width: 100%; /* Make the table take up the full width of its container */
-    table-layout: fixed; /* Use a fixed layout to prevent the table from overflowing its container */
+    width: 100%; 
+    table-layout: fixed; 
 }
 
 th, td {
-    word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+    word-wrap: break-word; 
     
 }
 
 .adminButtons {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    flex-direction: column; 
 }
 
 .btnSorting, .btnAddNewProducts {
-    margin-bottom: 10px; /* Add space between buttons when stacked */
+    margin-bottom: 10px; 
 }
 
 .card-img-top {
@@ -852,8 +850,6 @@ margin-bottom: 4rem;
 
 /* Admin Section */
 
-/* Admin Section */
-
 #adminSection {
     font-family: "JetBrains Mono", monospace;
     font-style: normal;
@@ -913,7 +909,3 @@ th, td {
     background: linear-gradient(to right, #4D869C, #ffc0cb);
 }
 
-/* Responsive styles for 720px width */
-@media (max-width: 720px) {
-   
-}

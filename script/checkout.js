@@ -8,7 +8,7 @@ let checkoutTable = document.querySelector('[table-checkout]');
 // Displaying cart items
 function cartItems() {
   if (cart.length === 0) {
-      checkoutTable.innerHTML = "<tr><td colspan='6'>Add items to your cart</td></tr>"; // Message that displays if no items in cart
+      checkoutTable.innerHTML = "<tr><td colspan='6'>Add items to your cart</td></tr>";
       return;
   }
 
@@ -25,7 +25,7 @@ function cartItems() {
 
 
   let tableContent = "";
-  let finalTotal = 0; // Initialize finalTotal
+  let finalTotal = 0;
 
 
 
@@ -56,10 +56,11 @@ function cartItems() {
         </div>`
       }
   }
+
   //Display amount due
   const headingElement = document.querySelector('#total-container');
   headingElement.textContent = `Amount Due : R${finalTotal}`;
   checkoutTable.innerHTML = tableContent;
 }
-// Call the cartItems function
+
 cartItems();
